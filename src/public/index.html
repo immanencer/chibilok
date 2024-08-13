@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Chibiliok UI</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Channels</h2>
+            <ul id="channelList">
+                <li class="channel active"># General</li>
+                <!-- Additional channels will be added dynamically -->
+            </ul>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main">
+            <div id="messages" class="messages"></div>
+            <div class="message-input">
+                <input type="text" id="messageInput" class="input" placeholder="Type your message...">
+                <button id="sendButton" class="button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <h2>Register</h2>
+            <input type="text" id="nicknameInput" class="input" placeholder="Enter your nickname">
+            <button id="generateKeyButton" class="button">Generate Private Key</button>
+            <pre id="privateKeyDisplay" class="private-key"></pre>
+            <button id="registerButton" class="button">Register</button>
+        </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
