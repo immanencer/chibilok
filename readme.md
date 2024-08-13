@@ -70,7 +70,3 @@ Contributions are welcome! Please submit a pull request or open an issue for any
 ### License
 
 This project is licensed under the MIT License.
-
----
-
-This revised README outlines the Chibiliok platform without mentioning other platforms, focusing on the core features and instructions for users and developers. Would you like any further adjustments?
