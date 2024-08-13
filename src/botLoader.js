@@ -11,10 +11,10 @@ export function loadBots() {
     const bots = [];
 
     // Read all files in the bots directory
-    fs.readdirSync(botsDir).forEach(file => {
+    fs.readdirSync(botsDir).forEach(async file => {
         if (file.endsWith('.js')) {
             // Dynamically import the bot module
-            const botModule = import(path.join(botsDir, file));
+            const botModule = await import('file://' + path.resolve(path.join(botsDir, file)));
 
             // Assuming each bot file exports a function named after the file (without extension)
             const botName = path.basename(file, '.js');

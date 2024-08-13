@@ -46,10 +46,10 @@ export function registerRoutes(app) {
         const newMessage = createMessage(username, channel, message);
 
         bots.forEach(bot => {
+            if (!bot.execute) return;
             bot.execute(message, (response) => {
                 if (response) {
-                    const botMessage = createMessage(bot.name, channel, response);
-                    res.status(200).json(botMessage);
+                    createMessage(bot.name, channel, response);
                 }
             });
         });
